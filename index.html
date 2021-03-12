@@ -123,6 +123,9 @@
             
           item.addEventListener("click",(event)=>{
             var price= document.getElementById("movie").value;
+              
+            if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
+            count++;
             
     </script>
           
