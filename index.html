@@ -8,20 +8,22 @@
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    
-    <div>
+
+      <header class="header">
+        <div>
         <img class="main-logo" src="./IMAGES/popcorn.jpg"/>
-      </div>
-    
-    <div class="movie-container">
-        <label style="font-size: 1em;">Pick a movie:</label>
-        <select id="movie">
+        </div>
+      </header>
+       
+      <div class="movie-container">
+        <label style="font-size: 20px;">Please select a movie: </label>
+        <select id="movie" style="font-size: 16px;">
           <option value="10">Coming 2 America ($15)</option>
           <option value="12">The Martian ($12)</option>
           <option value="8">Spider-Man: far from home ($10)</option>
         </select>
       </div>
-    
+  
       <ul class="showcase">
         <li>
           <div id="seat" class="seat"></div>
@@ -36,11 +38,11 @@
           <small class="status" style="font-size: 1em;">Occupied</small>
         </li>
       </ul>
-    
+  
       <div class="container">
         <div class="screen"></div>
-      
-      <div class="row">
+  
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -50,8 +52,7 @@
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
         </div>
-          
-      <div class="row">
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -61,8 +62,7 @@
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
         </div>
-    
-      <div class="row">
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -72,8 +72,7 @@
           <div id="seat" class="seat occupied"></div>
           <div id="seat" class="seat occupied"></div>
         </div>
-          
-      <div class="row">
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -83,8 +82,7 @@
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
         </div>
-      
-      <div class="row">
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -94,8 +92,7 @@
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
         </div>
-          
-      <div class="row">
+        <div class="row">
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
           <div id="seat" class="seat"></div>
@@ -106,42 +103,44 @@
           <div id="seat" class="seat"></div>
         </div>
       </div>
-    
-    <p class="text" style="font-size: 1em;margin:0px 0px 15px 0px">
+  
+      <p class="text" style="font-size: 20px;margin:0px 0px 15px 0px">
         You have selected : <span id="count">0</span> SEATS 
         <br>For a PRICE of : $
         <span id="total">0</span
         >
-      </p>
-    
-    <a href="./index.html">
-        <button class="btn-home">
-          BUY TICKET
+      </p><br>
+  
+      <a href="./index.html">
+        <button class="btn">
+          <b>BUY TICKET</b>
         </button>
       </a>
-    
-    <script>
+      
+  
+      <script>
        
         var count=0;
         var seats=document.getElementsByClassName("seat");
         for(var i=0;i<seats.length;i++){
           var item=seats[i];
-            
+          
           item.addEventListener("click",(event)=>{
             var price= document.getElementById("movie").value;
-              
+  
             if (!event.target.classList.contains('occupied') && !event.target.classList.contains('selected') ){
             count++;
-                
+            
             var total=count*price;
             event.target.classList.add("selected");
             document.getElementById("count").innerText=count;
             document.getElementById("total").innerText=total;
-                
+  
             }
           })
-        }        
-    </script>
-          
+        }
+      </script>
+
+      <footer class="footer"></footer>
 </body>
 </html>
