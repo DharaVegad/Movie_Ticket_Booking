@@ -4,11 +4,15 @@
         box-sizing: border-box;
       }
 
+      .header{
+        padding-top: 400px;
+      }
+
       .main-logo{
           padding: 5px;
-          width:500%;
-          height: 250px;
-          max-width: 400px;
+          width:900px;
+          height: 450px;
+          /*max-width: 400px;*/
       }
 
       body {
@@ -21,6 +25,7 @@
         height: 100vh;
         font-family: 'Lato', sans-serif;
         margin: 0;
+        width: 100%;
       }
 
       .movie-container {
@@ -28,7 +33,7 @@
       }
 
       .movie-container select {
-        background-color: #fff;
+        background-color: rgb(212, 97, 97);
         border: 0;
         border-radius: 5px;
         font-size: 14px;
@@ -46,15 +51,15 @@
 
       .seat {
         background-color: #444451;
-        height: 12px;
-        width: 15px;
+        height: 25px;
+        width: 27px;
         margin: 3px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
       }
 
       .seat.selected {
-        background-color: #6feaf6;
+        background-color: #08def1;
       }
 
       .seat.occupied {
@@ -136,9 +141,10 @@
     }
 
 
-    .btn-home{
-        background-color: #E50914;
-        border: 1px solid #E50914;
+    .btn{
+        background-color: #ec000c;
+        border: 1px solid #a00d15;
+        box-shadow: rgb(78, 78, 78) 2px 5px;
         padding: .6em 2em;
         border-radius: 10px;
         font-size: 1em;
@@ -146,8 +152,10 @@
         cursor: pointer;
     }
 
-    .btn-home:active{
+    .btn:active{
         border: 0px solid #E50914;
     }
-
     
+    .footer{
+      padding: 25px;
+    }
